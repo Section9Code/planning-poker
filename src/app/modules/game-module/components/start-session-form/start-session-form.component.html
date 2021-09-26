@@ -14,7 +14,6 @@
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-6 gap-6">
-
                             <!-- Email -->
                             <div class="col-span-6 sm:col-span-6">
                                 <label for="email-address" class="block text-sm font-medium text-gray-700">Session Name</label>
@@ -24,8 +23,21 @@
                             <!-- First name -->
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Your name</label>
-                                <input type="text" formControlName="userName" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" [ngClass]="{'border-red-500': sessionForm.controls.userName.invalid}">
+                                <input type="text" formControlName="userName" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" [ngClass]="{'border-red-500': sessionForm.controls.userName.invalid}"
+                                    (keyup)="userNameChanged()">
                             </div>
+
+                            <div class="col-span-6">
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">Your avatar</label>
+                            </div>
+
+                            <div class="col-span-1" *ngFor="let avatar of avatars">
+                                <div class="svg w-20 h-20">
+                                    <div [innerHTML]="avatar"></div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
