@@ -26,8 +26,6 @@ export class StartSessionFormComponent implements OnInit {
   }
 
   startSession() {
-    console.log('Start session', this.sessionForm);
-
     // Make sure the form is valid
     if (this.sessionForm.invalid) return;
 
@@ -46,15 +44,11 @@ export class StartSessionFormComponent implements OnInit {
 
   generateAvatars() {
     if (this.sessionForm.controls.userName.valid) {
-      //this.avatars = this.avatarSvc.getAvatars(this.sessionForm.controls.userName.value);
       this.avatar = this.avatarSvc.getInitialsAvatar(this.sessionForm.controls.userName.value);  
     } else {
       this.avatar = undefined;
     }
   }
 
-}
-function Out() {
-  throw new Error('Function not implemented.');
 }
 
