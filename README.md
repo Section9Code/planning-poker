@@ -1,27 +1,36 @@
-# PlanningPoker
+# Planning Poker Interactive Web App
+Planning poker is a great way to estimate work. It promotes discussion and proper understanding in the team doing the work so there are fewer surprises.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+I have found a total lack of a good online app to make it a simple process. So this is my attempt to create that simple online application to make it as simple as possible for anyone to participate. Either in the room on their phone or on the otherside of the planet.
 
-## Development server
+## Aims
+- No need to log in (Do not ask for details from the user)
+- Make it as simple as possible to use
+- Make it interactive
+- Let it be installed on a phone
+- Focus on helping a team do simple quick planning poker
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Application
+The application is a simple Angular application with a focus on lightweight (but simple) while not asking for login details. This isn't about making the lightest and fastest application. Just a simple app that is easy to create, update, and understand that does the job.
 
-## Code scaffolding
+### Running it locally
+You can run the application locally for development
+1. Clone the application from the repository
+```
+git clone xxx
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Install the packages
+```
+npm install
+```
 
-## Build
+3. Run the application
+```
+npm start
+````
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+That will build the application with the development configuration and run it locally on `http://localhost:4200`. This is a standard Angular application and doesn't do anyhting special
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Tailwind CSS
+The application uses Tailwind CSS as it's approach to UX. There are commands build into package.json to build the production css or development css.

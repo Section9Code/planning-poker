@@ -34,7 +34,13 @@
                             "src/styles.scss",
                             "site.css"
                         ],
-                        "scripts": []
+                        "scripts": [],
+                        "allowedCommonJsDependencies": [
+                            "@dicebear/avatars-bottts-sprites",
+                            "@dicebear/avatars-identicon-sprites",
+                            "@dicebear/avatars-initials-sprites",
+                            "@dicebear/avatars-jdenticon-sprites"
+                        ]
                     },
                     "configurations": {
                         "production": {
