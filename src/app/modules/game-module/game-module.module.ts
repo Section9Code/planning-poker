@@ -6,12 +6,15 @@ import { StartSessionPageComponent } from './pages/start-session-page/start-sess
 import { StartSessionFormComponent } from './components/start-session-form/start-session-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AvatarService } from './services/avatar.service';
+import { DataService } from './services/data.service';
+import { PlanningSessionComponent } from './pages/planning-session/planning-session.component';
 
 
 @NgModule({
   declarations: [
     StartSessionPageComponent,
-    StartSessionFormComponent
+    StartSessionFormComponent,
+    PlanningSessionComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +22,8 @@ import { AvatarService } from './services/avatar.service';
     GameModuleRoutingModule
   ],
   providers: [
-    AvatarService
+    AvatarService,
+    DataService
   ]
 })
 export class GameModuleModule { }

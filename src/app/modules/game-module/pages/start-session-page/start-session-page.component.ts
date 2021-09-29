@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SessionDetails } from '../../models/session-details';
+import { SessionDataService } from '../../services/session-data.service';
 
 @Component({
   templateUrl: './start-session-page.component.html',
@@ -7,13 +9,15 @@ import { SessionDetails } from '../../models/session-details';
 })
 export class StartSessionPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sessionSvc: SessionDataService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  StartSession(session: SessionDetails) {
-    console.log('Start Sess', session);
+  async StartSession(session: SessionDetails) {
+    const id = await this.sessionSvc.StartSession(session);
+    console.log(`Started session ${id}`);
+    this.router.navigate(['/session',id]);
   }
 
 }
