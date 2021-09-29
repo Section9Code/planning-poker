@@ -20,23 +20,19 @@
                                 <input type="text" formControlName="sessionName" name="email-address" id="email-address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" [ngClass]="{'border-red-500': sessionForm.controls.sessionName.invalid}">
                             </div>
 
-                            <!-- First name -->
-                            <div class="col-span-6 sm:col-span-3">
+                            <!-- Name -->
+                            <div class="col-span-4">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Your name</label>
                                 <input type="text" formControlName="userName" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" [ngClass]="{'border-red-500': sessionForm.controls.userName.invalid}"
                                     (keyup)="userNameChanged()">
                             </div>
 
-                            <div class="col-span-6">
-                                <label for="first-name" class="block text-sm font-medium text-gray-700">Your avatar</label>
-                            </div>
-
-                            <div class="col-span-1" *ngFor="let avatar of avatars">
+                            <!-- Avatar -->
+                            <div class="col-span-2">
                                 <div class="svg w-20 h-20">
                                     <div [innerHTML]="avatar"></div>
                                 </div>
                             </div>
-
 
                         </div>
                     </div>

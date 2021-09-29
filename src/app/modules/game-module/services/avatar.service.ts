@@ -24,6 +24,10 @@ export class AvatarService {
     return images;
   }
 
+  public getInitialsAvatar(id: string): SafeHtml {
+    return this.createInitialsAvatar(id);
+  }
+
   private createBotAvatar(id: string): SafeHtml {
     let svg = createAvatar(bottts_style, { seed: id });
     return this.sanitizer.bypassSecurityTrustHtml(svg);
